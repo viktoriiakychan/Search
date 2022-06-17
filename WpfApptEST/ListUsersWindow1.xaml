@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApptEST.ListUsersWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApptEST"
+        mc:Ignorable="d"
+        Title="ListUsersWindow1" Height="450" Width="800">
+
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Right" Margin="10,0,0,0">
+            <Button x:Name="btnAddUser" Click="btnAddUser_Click">Add</Button>
+            <Button x:Name="btnChangeUser" Margin="0,5" Click="btnChangeUser_Click">Change</Button>
+            <Button x:Name="btnRandowUser" Click="btnRandowUser_Click">Generation of data</Button>
+            <Button x:Name="btnSeach" Click="btnSeach_Click" Margin="0,4,0,0">Search</Button>
+            <Button x:Name="btnClear" Margin="0,4,0,0" Click="btnClear_Click">Clear</Button>
+        </StackPanel>
+        <DataGrid x:Name="dgUsers">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Image" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Height="25" Width="50" Source="{Binding Image}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+            <!--<DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <DockPanel Background="Aqua">
+                        <Image DockPanel.Dock="Left" Source="{Binding ImageUrl}" Height="64" Margin="10"></Image>
+                    </DockPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>-->
+        </DataGrid>
+       
+    </DockPanel>
+    
+    
+</Window>

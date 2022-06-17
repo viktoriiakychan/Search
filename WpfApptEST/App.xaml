@@ -1,0 +1,9 @@
+﻿<Application x:Class="WpfApptEST.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApptEST"
+             StartupUri="ListUsersWindow1.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

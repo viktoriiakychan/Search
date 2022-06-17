@@ -1,0 +1,71 @@
+﻿<Window x:Class="WpfApptEST.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApptEST"
+        mc:Ignorable="d"
+        Title="Вхід" Height="338" Width="590">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="219*"/>
+            <RowDefinition Height="103*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="163*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Label 
+            Content="Enter email" Margin="0,0,158,194"></Label>
+            <Label
+            Content="Enter password" Margin="-10,-199,158,165" Width="93" Height="27"/>
+            <TextBox 
+                 Text="" 
+                 
+                 Name ="email" Margin="108,-220,3,194" Height="22"/>
+
+            <PasswordBox 
+                 
+                 
+                 Name ="password" Margin="108,-201,3,164" Height="22"/>
+
+
+
+            <Button 
+            
+            Click="Button_Click" Margin="23,-170,24,98" Height="33">
+                <WrapPanel>
+                    <Label Content="LogIn" FontSize="14"/>
+                </WrapPanel>
+            </Button>
+            <Label Content="or" Margin="112,-179,113,0" FontSize="13" Grid.RowSpan="2" Height="27" Width="26"></Label>
+            <Button Content="Create an account" Click="CreateAnAccount" Margin="17,-64,12,34" Height="30"/>
+
+            <Button Content="MVVM" Click="Button_Click_2" Height="18" Margin="129,-36,-32,0" Width="58"/>
+
+
+        </StackPanel>
+        <StackPanel  Grid.Column="0" Grid.Row="1">
+            <Button Content="Add" Name="add" Width="59" Margin="-17,20,183,0" Height="26" Visibility="Hidden" Click="CreateAnAccount" />
+            <Button Content="Change" Name="change" Width="59" Height="26" Margin="10,-26,0,0" Visibility="Hidden" Click="Change_Click" />
+            <Button Content="Delete" Name="delete" Width="59" Height="26" Margin="213,-26,0,0" Visibility="Hidden" Click="Delete_Click" />
+
+        </StackPanel>
+        <DataGrid x:Name="grid" Grid.Column="1" Visibility="Hidden" Grid.RowSpan="2" Grid.Row="0">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Image">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Height="25" Width="50" Source="{Binding Image}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
