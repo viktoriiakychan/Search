@@ -10,10 +10,28 @@
     <DockPanel Margin="10">
         <StackPanel DockPanel.Dock="Right" Margin="10,0,0,0">
             <Button x:Name="btnAddUser" Click="btnAddUser_Click">Add</Button>
-            <Button x:Name="btnChangeUser" Margin="0,5" Click="btnChangeUser_Click">Change</Button>
-            <Button x:Name="btnRandowUser" Click="btnRandowUser_Click">Generation of data</Button>
-            <Button x:Name="btnSeach" Click="btnSeach_Click" Margin="0,4,0,0">Search</Button>
-            <Button x:Name="btnClear" Margin="0,4,0,0" Click="btnClear_Click">Clear</Button>
+            <!--<Button x:Name="btnChangeUser" Margin="0,5" Click="btnChangeUser_Click">Change</Button>-->
+            <Button x:Name="btnRandowUser" Click="btnRandowUser_Click" Margin="0,6,0,0">Generation of data</Button>
+            <Button x:Name="btnSeach" Click="btnSeach_Click" Margin="0,6,0,0">Search</Button>
+            <Button x:Name="btnClear" Margin="0,6,0,0" Click="btnClear_Click">Clear</Button>
+            <Button Height="27" Width="30" x:Name="back" Margin="0,14,72,0" Click="back_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/back.png"/>
+                </Button.Background>
+            </Button>
+            <Button Height="27" Width="30" x:Name="forward" Margin="0,-27,-66,0" RenderTransformOrigin="0.56,0.527" Click="forward_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="/back.png"/>
+                </Button.Background>
+            </Button>
         </StackPanel>
         <DataGrid x:Name="dgUsers">
             <DataGrid.Columns>
@@ -35,8 +53,8 @@
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>-->
         </DataGrid>
-       
+
     </DockPanel>
-    
-    
+
+
 </Window>
